@@ -1,0 +1,14 @@
+{% load static %}
+<div class="container-title">
+{% include 'main/title.html'%}
+    </div>
+<body>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
+    <div class="container-body">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+<div class="container-footer">
+        {% include 'main/footer.html'%}
+</div>
+

@@ -1,0 +1,12 @@
+<!-- Title-->
+{% load static %}
+{% block title%}
+<nav class="navbar">
+    <img src="{% static 'img/logotip.jpg' %}" alt="Logo" width="95" height="100">
+    <a class="navbar-brand" href="">CAFEteriy</a>
+          <a class="nav-link" href="{% url 'home' %}">Главная</a>
+          <a class="nav-link" href="{% url 'about' %}">О нас</a>
+          <a class="nav-link" href="{% url 'menu' %}">Меню</a>
+          <a class="nav-link" href="{% url 'svyaz' %}">Обратная связь</a>
+  </nav>
+{% endblock%}

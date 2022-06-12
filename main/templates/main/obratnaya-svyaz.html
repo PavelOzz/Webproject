@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<link href=" {% static 'css/footermenu.css'%}" rel="stylesheet">
+<link href=" {% static 'css/columsvyaz.css'%}" rel="stylesheet">
+<div class="features text-center ">
+	<h1>Есть идея? Предложи!</h1>
+	<h5>Пожелания, предложения, отзывы</h5>
+
+	<form method="post">
+		{% csrf_token %}
+		<div style="column-count:2;">
+			<div class="formsvyaz">
+				{{ form.name }}<br>
+				{{ form.phone_number }}<br>
+				{{ form.email }}<br>
+				{{ form.message }}<br>
+			</div>
+			<div class="formsvyazz">
+				<img src="{% static 'img/Ekler.jpg' %}" alt="Logo" width="70%" height="70%" align="right">
+			</div>
+		</div>
+		<span>{{ error }}</span>
+		<h10>Нажимая на кнопку «Отправить сообщение», вы соглашаетесь на обработку персональных данных в соответствии с пользовательским соглашением</h10><br>
+		<button class="btn btn-success" type="submit">Отправить сообщение</button>
+	</form>
+</div>
+{% endblock %}
